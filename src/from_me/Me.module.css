@@ -1,0 +1,70 @@
+@use postcss-nested;
+
+p {
+  max-width: 255px;
+  word-wrap: break-word;
+  margin-bottom: 12px;
+  line-height: 24px;
+  position:relative;
+	padding:10px 20px;
+  border-radius:25px;
+  
+  &:before, &:after {
+    content:"";
+		position:absolute;
+    bottom:-2px;
+    height:20px;
+  }
+}
+
+.from_me {
+	color:white; 
+	background:#0B93F6;
+	align-self: flex-end;
+		
+	&:before {
+		right:-7px;
+		border-right:20px solid #0B93F6;
+		border-bottom-left-radius: 16px 14px;
+		transform:translate(0, -2px);
+	}
+
+	&:after {
+		right:-56px;
+		width:26px;
+		background:white;
+		border-bottom-left-radius: 10px;
+		transform:translate(-30px, -2px);
+	}
+}
+
+
+img{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+}
+
+.container{
+	position: relative
+}
+.img_right{
+	position: absolute;
+	width: 80px;
+	height: 60px;
+	right: 60px;
+	top:30%;
+}
+
+
+.time{
+	display: flex;
+	font-size: 13px;
+	font-weight: bold;
+	justify-content: flex-end;
+}
+
+.name{
+	font-size: 15px;
+	color: #191a34;
+}

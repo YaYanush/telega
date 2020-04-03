@@ -1,0 +1,70 @@
+@use postcss-nested;
+
+
+p {
+  max-width: 255px;
+  word-wrap: break-word;
+  margin-bottom: 12px;
+  line-height: 24px;
+  position:relative;
+	padding:10px 20px;
+  border-radius:25px;
+  
+  &:before, &:after {
+    content:"";
+		position:absolute;
+    bottom:-2px;
+    height:20px;
+  }
+}
+
+
+.from_them {
+	background:#E5E5EA;
+	color:black;
+		
+	&:before {
+		left:-7px;
+		border-left:20px solid #E5E5EA;
+		border-bottom-right-radius: 16px 14px;
+		transform:translate(0, -2px);
+	}
+
+	&:after {
+		left:4px;
+		width:26px;
+		background:white;
+		border-bottom-right-radius: 10px;
+		transform:translate(-30px, -2px);
+	}
+}
+
+img{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+}
+
+.container{
+	position: relative
+}
+
+.img_left{
+	position: absolute;
+	width: 80px;
+	height: 60px;
+	right: 445px;
+	top:30%;
+}
+
+.time{
+	display: flex;
+	font-size: 13px;
+	font-weight: bold;
+	justify-content: flex-end;
+}
+
+.name{
+	font-size: 15px;
+	color: #191a34;
+}
